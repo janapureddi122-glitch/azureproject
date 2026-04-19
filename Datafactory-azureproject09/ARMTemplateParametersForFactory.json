@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Datafactory-azureproject09"
+		},
+		"azuredatalake_ls_accountKey": {
+			"value": ""
+		},
+		"azuresql_ls_password": {
+			"value": ""
+		},
+		"azuredatalake_ls_properties_typeProperties_url": {
+			"value": "https://storageazureproject0.dfs.core.windows.net/"
+		},
+		"azuresql_ls_properties_typeProperties_server": {
+			"value": "serverr-azureproject.database.windows.net"
+		},
+		"azuresql_ls_properties_typeProperties_database": {
+			"value": "database-azureproject"
+		},
+		"azuresql_ls_properties_typeProperties_userName": {
+			"value": "radha"
+		}
+	}
+}
