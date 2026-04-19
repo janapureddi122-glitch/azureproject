@@ -34,7 +34,8 @@
 							"container": "bronze",
 							"file": "cdc.json"
 						}
-					}
+					},
+					"firstRowOnly": true
 				}
 			},
 			{
@@ -187,10 +188,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
-						"additionalColumns": {
-							"type": "Expression",
-							"value": "@activity('max_cdc').output.resultSets[0].rows[0].cdc"
-						},
+						"additionalColumns": [
+							{
+								"name": "cdc",
+								"value": {
+									"value": "@activity('max_cdc').output.resultSets[0].rows[0].cdc",
+									"type": "Expression"
+								}
+							}
+						],
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
